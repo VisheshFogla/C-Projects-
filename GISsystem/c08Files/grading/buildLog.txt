@@ -1,0 +1,35 @@
+Executing gradeC08.sh...
+
+Creating build subdirectory
+
+Student's tar file contains:
+-rw-r--r-- visheshfogla/visheshfogla 15423 2020-12-05 09:57 c08solution.c
+-rw-r--r-- visheshfogla/visheshfogla  3603 2020-12-05 09:57 c08solution.h
+-rw-rw-r-- visheshfogla/visheshfogla  4362 2020-11-12 21:01 StringHashTable.h
+-rw------- visheshfogla/visheshfogla  8562 2020-11-10 03:30 StringHashTable.c
+
+Copying the student's .c and .h files to the build directory:
+
+total 40
+-rw-------. 1 visheshfogla visheshfogla 15423 Dec  5 10:17 c08solution.c
+-rw-------. 1 visheshfogla visheshfogla  3603 Dec  5 10:17 c08solution.h
+-rw-------. 1 visheshfogla visheshfogla  8562 Dec  5 10:17 StringHashTable.c
+-rw-------. 1 visheshfogla visheshfogla  4362 Dec  5 10:17 StringHashTable.h
+
+Compiling the submitted files:
+    gcc -o c08_visheshfogla -std=c11 -Wall -W -ggdb3 -lm *.c
+c08solution.c: In function ‘main’:
+c08solution.c:28:14: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main(int argc, char **argv) {
+          ~~~~^~~~
+c08solution.c: In function ‘elfhash’:
+c08solution.c:152:8: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+   if ( high = (hashvalue & 0xF0000000) ) { // if high nybble != 0000
+        ^~~~
+c08solution.c: In function ‘complete_array’:
+c08solution.c:183:13: warning: implicit declaration of function ‘getline’; did you mean ‘getenv’? [-Wimplicit-function-declaration]
+  line_len = getline(&line_buf, &buf_size, file);
+             ^~~~~~~
+             getenv
+
+================================================================================
